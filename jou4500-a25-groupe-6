@@ -71,14 +71,16 @@ Pour commencer l’analyse exploratoire, nous avons créé un tableau croisé dy
 ·       Valeur : les quartiers (option counta)
 Ce tableau croisé dynamique a permis de réorganiser automatiquement les revenus médians des 24 quartiers afin de faciliter leur analyse. En triant les valeurs par ordre croissant, nous avons pu repérer rapidement les quartiers aux revenus les plus faibles et ceux aux revenus les plus élevés. Il a aussi permis de compter le nombre de quartiers associés à chaque montant de revenu grâce à la fonction COUNTA. Cette étape nous a aidés à vérifier si certains quartiers partageaient le même revenu médian.
 
+
 **Cette section doit inclure une capture d'écran de votre tableau croisé dynamique, comme ceci :**
 
-![](pivot-table-screen-capture.png)<br>
+![Image 5](image-4.png)<br>
 *Figure 2 : Ce tableau croisé dynamique montre...*
+
 
 **Cette section doit aussi inclure une capture d'écran de votre graphique exploratoire, comme ceci :**
 
-![](chart-screen-capture.png)<br>
+![Image 6](image-5.png))<br>
 *Figure 3 : Ce graphique exploratoire montre...*
 
 ## 4. Récit potentiel
