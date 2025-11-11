@@ -50,19 +50,29 @@ C'est aussi comme ça qu'on crée une liste ordonnée. Il suffit de mettre `1.` 
 
 ### 3.1. Analyse VIMA
 
-Utilisez trois croisillons (`###`) pour créer un intertitre de niveau 3 comme celui-ci. Je vous prie de suivre ce modèle en ce qui a trait aux intertitres de niveaux 1 et 2. Toutefois, je vous laisse le loisir d'utiliser les intertitres de niveau 3 comme bon vous semble.
+L’une des méthodes pour explorer la validité des données est d’effectuer une analyse VIMA. Cet acronyme signifie Valide, Invalide, Manquante et aberrante (Statistique Canada, 2022). Cette démarche nous permet d’apprécier la qualité, l’exactitude et la fiabilité de notre jeu de données.
+1. Valeur valide : Toutes les valeurs du revenu total médian sont présentes, numériques et cohérentes avec ce que l’on peut attendre pour les quartiers d’Ottawa. Les montants correspondent à une fourchette réaliste pour des revenus médians urbains. Aucune valeur manquante, nulle ou illogique n’a été trouvée, ce qui confirme la validité du jeu de données.
+2. Valeur invalide : Aucune valeur invalide n’a été détectée. Une valeur invalide aurait été, par exemple, une cellule contenant du texte (« N/A », « inconnu »), un symbole ($$$) ou un chiffre négatif. La présence exclusive de nombres entiers positifs et cohérents indique que les données ont été correctement saisies.
+3. Valeur manquantes : Les valeurs manquantes (cellules vides) sont inexistantes dans notre tableau de données. Chaque variable nominale indique un revenu en dollar ce qui renforce la fiabilité du jeu de données.
+4. Valeur Aberrantes : Ce sont celles extrêmement élevées ou extrêmement basses par rapport à ce que l’on s’attendait à observer.  Les plus basses dans notre jeu de données sont à 39 200 $, ce qui représente un écart important avec les quartiers les plus élevés. Mais cela ne veut pas dire qu’elles sont anormales. Aucun revenu ne dépasse de façon démesurée la tendance générale.
 
+En résumé, les données sont valides, exactes et fiables.
 
-
-Appuyez vos affirmations en citant les sources appropriées. Veuillez suivre les [normes APA en matière d'attribution dans le corps du texte](https://apastyle.apa.org/style-grammar-guidelines/citations).
-
-**Par exemple :**
-
-Comme l'affirme Cairo (2016), une visualisation de données doit être véridique...
 
 ### 3.2. Nettoyage des données
 
-Insérez votre texte ici.
+Le nettoyage d' un jeu de données est essentiel pour garantir que l’analyse repose sur des informations justes et fiables. Nous avons donc utilisé trois méthodes différentes afin de corriger les erreurs et nous assurer que nos données sont propres.
+
+La première étape a été d’utiliser l’outil de nettoyage intégré proposé par Google Feuilles de calcul sur la feuille 2.
+Données > Nettoyage de données > Suggestions de nettoyage
+Deux modifications nous ont alors été suggérées: supprimer les espaces blancs dans les colonnes A15 et B1. Ceux-ci ont été acceptés.
+Ensuite, Nous avons utilisé l’outil Statistiques des colonnes pour examiner les valeurs présentes dans chaque colonne.
+Données > Statistiques des colonnes
+Cet outil a permis de remarquer que la cellule A15 contenait seulement l’inscription « Rideau-Rockcliffe », sans le numéro du quartier. Comme les quartiers étaient classés en ordre et que le numéro 13 était manquant, nous avons ajouté « Quartier 13 » dans le tableau. Cette information a également été confirmée en consultant la liste officielle des quartiers sur le site de la Ville d’Ottawa. 
+Pour terminer, nous avons importé les données dans OpenRefine afin d’effectuer une dernière vérification. Nous avons utilisé le filtre Facet > Text facet qui permet d’observer les tendances d’une colonne en regroupant toutes les valeurs uniques qu’elle contient. Un facet sert à repérer rapidement les différents éléments présents dans une variable, à voir combien de fois ils apparaissent et à identifier d’éventuelles anomalies (Exploring Facets | OpenRefine, 2024).
+En appliquant ce filtre à la colonne « Quartier », nous avons pu vérifier si certaines valeurs se répétaient ou s’il existait des erreurs de saisie. Aucune répétition n’a été détectée. Cependant, nous avons constaté que la valeur « Ville d’Ottawa » avait été incluse par erreur dans la colonne des quartiers. Nous l’avons donc supprimée manuellement dans Google Sheets. Après cette correction, notre jeu de données est propre et prêt pour l’analyse.
+
+![Image 3](image-6.png)<br>
 
 ### 3.3. Analyse exploratoire des données (AED)
 
@@ -77,6 +87,7 @@ Ce tableau croisé dynamique a permis de réorganiser automatiquement les revenu
 ![Image 5](image-4.png)<br>
 *Figure 2 : Ce tableau croisé dynamique montre...*
 
+À partir de ce tableau, un graphique exploratoire a été créé à l’aide de l’outil graphique de Google Feuilles de calcul. L’option Insertion > Graphique a été utilisée, puis l’onglet Personnaliser dans l'éditeur de graphique a permis d’ajuster la présentation. Nous avons opté pour un graphique à colonnes en 3D, avec des couleurs vives et modifié le titre. De même, des quadrillages principaux et secondaires ont été sélectionnés pour améliorer la lisibilité. Sur l’axe vertical, nous avons placé les revenus totaux, et sur l’axe horizontal, les quartiers. Ce graphique rend les variations de revenus beaucoup plus visibles et facilite l’interprétation des données.
 
 **Cette section doit aussi inclure une capture d'écran de votre graphique exploratoire, comme ceci :**
 
