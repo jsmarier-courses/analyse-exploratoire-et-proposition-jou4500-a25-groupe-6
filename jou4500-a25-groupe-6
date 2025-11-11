@@ -66,7 +66,10 @@ Insérez votre texte ici.
 
 ### 3.3. Analyse exploratoire des données (AED)
 
-Insérez votre texte ici.
+Pour commencer l’analyse exploratoire, nous avons créé un tableau croisé dynamique dans Google Feuilles de calcul. L’ensemble du tableau a été sélectionné, puis l’option Données > Tableau croisé dynamique a été appliquée. Dans la nouvelle feuille générée, nous avons choisis :
+·       Ligne : le revenu médian total par bénéficiaire ainsi que les Quartiers
+·       Valeur : les quartiers (option counta)
+Ce tableau croisé dynamique a permis de réorganiser automatiquement les revenus médians des 24 quartiers afin de faciliter leur analyse. En triant les valeurs par ordre croissant, nous avons pu repérer rapidement les quartiers aux revenus les plus faibles et ceux aux revenus les plus élevés. Il a aussi permis de compter le nombre de quartiers associés à chaque montant de revenu grâce à la fonction COUNTA. Cette étape nous a aidés à vérifier si certains quartiers partageaient le même revenu médian.
 
 **Cette section doit inclure une capture d'écran de votre tableau croisé dynamique, comme ceci :**
 
