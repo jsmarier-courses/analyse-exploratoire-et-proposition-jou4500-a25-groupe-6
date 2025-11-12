@@ -3,7 +3,7 @@
 **Bonavena Gatima, Debora Adebiyi, Djeneba Diakité**<br>
 **Présenté à Jean-Sébastien Marier**<br>
 
-# Aanalyse exploratoire de données (AED) et proposition
+# Analyse exploratoire de données (AED) et proposition
 
 
 ## 1. Introduction
@@ -133,24 +133,20 @@ En résumé, cette expérience nous a appris à allier rigueur méthodologique e
 
 ## 6. Références
 
+Étude de quartiers d’Ottawa. (2025). _Bienvenue à l'étude des quartiers d'Ottawa_.
+[https://www.neighbourhoodstudy.ca/fr/](https://www.neighbourhoodstudy.ca/fr/)
+
 Exploring facets | OpenRefine. (2024, April 29). [https://openrefine.org/docs/manual/facets](https://openrefine.org/docs/manual/facets)
 
 Marier, J.S. (2024). Fichier CSV du recensement 2021 – Données par quartier (Ottawa) [GitHub]. [https://raw.githubusercontent.com/jsmarier/files-for-course-assignments/refs/heads/main/Questionnaire_d%C3%A9taill%C3%A9_du_recensement_de_2021_Donn%C3%A9es_par_quartier.csv](https://raw.githubusercontent.com/jsmarier/files-for-course-assignments/refs/heads/main/Questionnaire_d%C3%A9taill%C3%A9_du_recensement_de_2021_Donn%C3%A9es_par_quartier.csv)
 
-Statistique Canada. (2022, February 25). Exactitude et validation des données : méthodes pour assurer la qualité des données [Vidéo]. [https://www.statcan.gc.ca/fr/afc/litteratie-donnees/catalogue/892000062020008](https://www.statcan.gc.ca/fr/afc/litteratie-donnees/catalogue/892000062020008)
-
-Ville d’Ottawa. (2023.). Questionnaire détaillé du recensement de 2021 Données par quartier. Ottawa ouverte. [https://ouverte.ottawa.ca/datasets/ottawa::questionnaire-d%C3%A9taill%C3%A9-du-recensement-de-2021-donn%C3%A9es-par-quartier/about](https://ouverte.ottawa.ca/datasets/ottawa::questionnaire-d%C3%A9taill%C3%A9-du-recensement-de-2021-donn%C3%A9es-par-quartier/about)
-
-Ville d'Ottawa. (n.d.). Cartes des quartiers et zones des conseils scolaires. Site Web officiel de la ville d’Ottawa. [https://ottawa.ca/fr/hotel-de-ville/elections/cartes-des-quartiers-et-zones-des-conseils-scolaires#section-9ac4699c-ed4f-4179-b386-78953e3ab0d0](https://ottawa.ca/fr/hotel-de-ville/elections/cartes-des-quartiers-et-zones-des-conseils-scolaires#section-9ac4699c-ed4f-4179-b386-78953e3ab0d0)
-
 Myles , J., Picot, G., & Pyper, W. (Eds.). (2000). *Inégalités entre les quartiers des villes canadiennes - ARCHIVED*. Statistique Canada. 
 [https://www150.statcan.gc.ca/n1/pub/11f0019m/11f0019m2000160-fra.pdf](https://www150.statcan.gc.ca/n1/pub/11f0019m/11f0019m2000160-fra.pdf)
 
-L’Étude des quartiers d’Ottawa 
-[https://www.neighbourhoodstudy.ca/fr/](https://www.neighbourhoodstudy.ca/fr/)
+Statistique Canada. (2022, February 25). Exactitude et validation des données : méthodes pour assurer la qualité des données [Vidéo]. [https://www.statcan.gc.ca/fr/afc/litteratie-donnees/catalogue/892000062020008](https://www.statcan.gc.ca/fr/afc/litteratie-donnees/catalogue/892000062020008)
 
-[https://www150.statcan.gc.ca/n1/pub/75-006-x/2023001/article/00002-eng.htm](https://www150.statcan.gc.ca/n1/pub/75-006-x/2023001/article/00002-eng.htm)
+Uppal, S. (2023). _La hausse des prix et ses répercussions sur les plus vulnérables financièrement : un profil des personnes faisant partie du quintile inférieur de revenu familial_. Statistique Canada. [https://www150.statcan.gc.ca/n1/pub/75-006-x/2023001/article/00002-eng.htm](https://www150.statcan.gc.ca/n1/pub/75-006-x/2023001/article/00002-eng.htm)
 
-**Voici un exemple :**
+Ville d’Ottawa. (2023). _Questionnaire détaillé du recensement de 2021 Données par quartier. Ottawa ouverte_. [https://ouverte.ottawa.ca/datasets/ottawa::questionnaire-d%C3%A9taill%C3%A9-du-recensement-de-2021-donn%C3%A9es-par-quartier/about](https://ouverte.ottawa.ca/datasets/ottawa::questionnaire-d%C3%A9taill%C3%A9-du-recensement-de-2021-donn%C3%A9es-par-quartier/about)
 
-Bounegru, L., & Gray, J. (Eds.). (2021). *The Data Journalism Handbook 2: Towards A Critical Data Practice*. Amsterdam University Press. [https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153](https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153)
+Ville d'Ottawa. (n.d.). _Cartes des quartiers et zones des conseils scolaires_. Site Web officiel de la ville d’Ottawa. [https://ottawa.ca/fr/hotel-de-ville/elections/cartes-des-quartiers-et-zones-des-conseils-scolaires#section-9ac4699c-ed4f-4179-b386-78953e3ab0d0](https://ottawa.ca/fr/hotel-de-ville/elections/cartes-des-quartiers-et-zones-des-conseils-scolaires#section-9ac4699c-ed4f-4179-b386-78953e3ab0d0)
