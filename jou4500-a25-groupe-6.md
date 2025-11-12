@@ -35,7 +35,7 @@ Après l’importation, nous avons extrait uniquement les lignes nécessaires à
 ![](Image2-Jeudedonnee.PNG)<br>
 *Le fichier Google Feuilles de calcul des données extraites.*
 
-
+Fichier Google Sheet: [https://docs.google.com/spreadsheets/d/1VksFl3qRm7LuZUExI3b86OL0BgQ6D7cVPPjMW-EPKZc/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1VksFl3qRm7LuZUExI3b86OL0BgQ6D7cVPPjMW-EPKZc/edit?usp=sharing)
 
 ## 3. Comprendre les données
 
