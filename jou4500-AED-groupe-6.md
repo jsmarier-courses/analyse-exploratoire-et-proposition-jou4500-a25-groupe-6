@@ -17,10 +17,9 @@ Le jeu de données est accessible sur [Ottawa ouverte](https://ouverte.ottawa.ca
 Ce travail suivra les sections suivantes : obtention des données, compréhension des données (analyse VIMA, nettoyage et analyse exploratoire), formulation d’un récit potentiel, conclusion et références.
 
 
-
 ## 2. Obtenir les données
 
-Pour débuter l’analyse, nous avons d’abord téléchargé le fichier CSV contenant les données du _Questionnaire détaillé du recensement de 2021 – Données par quartier_ à partir du portail GitHub de JSMarier. Une fois le fichier enregistré sur notre ordinateur, nous avons ouvert Google Feuilles de calcul, créé une nouvelle feuille, puis cliqué sur Fichier > Importer. Dans le menu d’importation, nous avons sélectionné le fichier CSV du recensement et choisi l’option permettant de remplacer la feuille actuelle. Le jeu de données original est ainsi apparu immédiatement dans Google Sheets.
+Pour débuter l’analyse, nous avons d’abord téléchargé le fichier CSV contenant les données du _Questionnaire détaillé du recensement de 2021 – Données par quartier_ à partir du portail GitHub de JSMarier. Une fois le fichier enregistré sur notre ordinateur, nous avons ouvert Google Feuilles de calcul, créé une nouvelle feuille, puis cliqué sur _Fichier > Importer_. Dans le menu d’importation, nous avons sélectionné le fichier CSV du recensement et choisi l’option permettant de remplacer la feuille actuelle. Le jeu de données original est ainsi apparu immédiatement dans Google Sheets.
 #
 **Image 1**
 
@@ -60,15 +59,15 @@ En résumé, les données sont valides, exactes et fiables.
 
 Le nettoyage d'un jeu de données est essentiel pour garantir que l’analyse repose sur des informations justes et fiables. Nous avons donc utilisé trois méthodes différentes afin de corriger les erreurs et nous assurer que nos données sont propres.
 
-La première étape a été d’utiliser l’outil de nettoyage intégré proposé par Google Feuilles de calcul sur la feuille 2:`Données > Nettoyage de données > Suggestions de nettoyage`
+La première étape a été d’utiliser l’outil de nettoyage intégré proposé par Google Feuilles de calcul sur la feuille 2: _Données > Nettoyage de données > Suggestions de nettoyage_
 
 Deux modifications nous ont alors été suggérées: supprimer les espaces blancs dans les colonnes A15 et B1. Ceux-ci ont été acceptés.
 
-Ensuite, Nous avons utilisé l’outil Statistiques des colonnes pour examiner les valeurs présentes dans chaque colonne; `Données > Statistiques des colonnes`
+Ensuite, Nous avons utilisé l’outil Statistiques des colonnes pour examiner les valeurs présentes dans chaque colonne; _Données > Statistiques des colonnes_
 
 Cet outil a permis de remarquer que la cellule A15 contenait seulement l’inscription « Rideau-Rockcliffe », sans le numéro du quartier. Comme les quartiers étaient classés en ordre et que le numéro 13 était manquant, nous avons ajouté « Quartier 13 » dans le tableau. Cette information a également été confirmée en consultant la liste officielle des quartiers sur le site de la Ville d’Ottawa. 
 
-Pour terminer, nous avons importé les données dans OpenRefine afin d’effectuer une dernière vérification. Nous avons utilisé le filtre `Facet > Text facet` qui permet d’observer les tendances d’une colonne en regroupant toutes les valeurs uniques qu’elle contient. Un facet sert à repérer rapidement les différents éléments présents dans une variable, à voir combien de fois ils apparaissent et à identifier d’éventuelles anomalies (Exploring Facets | OpenRefine, 2024).
+Pour terminer, nous avons importé les données dans OpenRefine afin d’effectuer une dernière vérification. Nous avons utilisé le filtre _Facet > Text facet_ qui permet d’observer les tendances d’une colonne en regroupant toutes les valeurs uniques qu’elle contient. Un facet sert à repérer rapidement les différents éléments présents dans une variable, à voir combien de fois ils apparaissent et à identifier d’éventuelles anomalies (Exploring Facets | OpenRefine, 2024).
 En appliquant ce filtre à la colonne « Quartier », nous avons pu vérifier si certaines valeurs se répétaient ou s’il existait des erreurs de saisie. Aucune répétition n’a été détectée. Cependant, nous avons constaté que la valeur « Ville d’Ottawa » avait été incluse par erreur dans la colonne des quartiers. Nous l’avons donc supprimée manuellement dans Google Sheets. Après cette correction, notre jeu de données est propre et prêt pour l’analyse.
 
 **Image 3**
