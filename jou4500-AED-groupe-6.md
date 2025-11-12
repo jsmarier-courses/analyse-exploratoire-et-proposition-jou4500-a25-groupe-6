@@ -37,6 +37,8 @@ Après l’importation, nous avons extrait uniquement les lignes nécessaires à
 
 Fichier Google Sheet: [https://docs.google.com/spreadsheets/d/1VksFl3qRm7LuZUExI3b86OL0BgQ6D7cVPPjMW-EPKZc/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1VksFl3qRm7LuZUExI3b86OL0BgQ6D7cVPPjMW-EPKZc/edit?usp=sharing)
 
+Notre jeu de données nettoyé comporte 26 lignes et 2 colonnes. Les valeurs semblent propres, cohérentes et faciles à lire, sans doublons ni cellules manquantes. La colonne A, « Quartier », contient des variables nominales, c’est-à-dire les noms officiels des quartiers d’Ottawa. La colonne B, contient des variables quantitatives continues, soit les montants du revenu médian exprimés en dollars. En comparant ces noms avec ceux publiés sur le site officiel de la Ville d’Ottawa, nous avons remarqué que certains quartiers étaient mal répertoriés ou incomplets. Nous avons donc corrigé les noms suivants en ajoutant les traits d’union manquants : Orléans-Est-Cumberland, Orléans-Sud-Navan, Riverside-Sud-Findlay Creek, Kanata-Sud et Barrhaven-Est. Enfin, en observant les valeurs, une première hypothèse se dégage : les quartiers centraux d’Ottawa semblent présenter des revenus médians plus faibles que les secteurs périphériques tels qu’Orléans ou Kanata.
+
 ## 3. Comprendre les données
 
 ### 3.1. Analyse VIMA
@@ -68,12 +70,12 @@ Cet outil a permis de remarquer que la cellule A15 contenait seulement l’inscr
 
 Pour terminer, nous avons importé les données dans OpenRefine afin d’effectuer une dernière vérification. Nous avons utilisé le filtre `Facet > Text facet` qui permet d’observer les tendances d’une colonne en regroupant toutes les valeurs uniques qu’elle contient. Un facet sert à repérer rapidement les différents éléments présents dans une variable, à voir combien de fois ils apparaissent et à identifier d’éventuelles anomalies (Exploring Facets | OpenRefine, 2024).
 En appliquant ce filtre à la colonne « Quartier », nous avons pu vérifier si certaines valeurs se répétaient ou s’il existait des erreurs de saisie. Aucune répétition n’a été détectée. Cependant, nous avons constaté que la valeur « Ville d’Ottawa » avait été incluse par erreur dans la colonne des quartiers. Nous l’avons donc supprimée manuellement dans Google Sheets. Après cette correction, notre jeu de données est propre et prêt pour l’analyse.
-#
+
 **Image 3**
 
 ![](Image3-Openrefine.PNG)<br>
 *Analyse facet dans OpenRefine*
-#
+
 **Image 4**
 
 ![](Image4-Donneeprope.PNG)<br>
@@ -95,6 +97,7 @@ Ce tableau croisé dynamique a permis de réorganiser automatiquement les revenu
 *Ce tableau croisé dynamique montre le revenu median des quartiers par ordre croissant ainsi que le nombre de quartiers associés à chaque revenu*
 
 À partir de ce tableau, un graphique exploratoire a été créé à l’aide de l’outil graphique de Google Feuilles de calcul. L’option Insertion > Graphique a été utilisée, puis l’onglet Personnaliser dans l'éditeur de graphique a permis d’ajuster la présentation. Nous avons opté pour un graphique à colonnes en 3D, avec des couleurs vives et modifié le titre. De même, des quadrillages principaux et secondaires ont été sélectionnés pour améliorer la lisibilité. Sur l’axe vertical, nous avons placé les revenus totaux, et sur l’axe horizontal, les quartiers. Ce graphique rend les variations de revenus beaucoup plus visibles et facilite l’interprétation des données.
+
 
 **Image 6**
 
