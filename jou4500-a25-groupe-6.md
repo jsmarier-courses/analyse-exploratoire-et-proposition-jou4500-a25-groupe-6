@@ -104,40 +104,53 @@ Ce tableau croisé dynamique a permis de réorganiser automatiquement les revenu
 ## 4. Récit potentiel
 
 Étant donné que l’analyse des revenus médians par quartier à Ottawa révèle un écart important entre les quartiers à faible revenu, comme Rideau-Vanier ou Gloucester-Southgate, et ceux à revenu plus élevé, tels que Kitchissippi ou Orléans Sud-Navan, notre histoire cherchera à comprendre les raisons qui expliquent ces différences. Nous explorerons les facteurs socio-économiques, historiques ou structurels qui contribuent à cette inégale répartition des revenus à travers la ville.
+
 Pour raconter cette histoire de manière complète, il sera nécessaire de rassembler d’autres données complémentaires. Par exemple, le niveau d’éducation, le taux d’emploi, le coût du logement, la proportion de nouveaux arrivants, le type de ménages ou encore l’accès aux services publics pourraient aider à expliquer pourquoi certains quartiers demeurent moins favorisés que d’autres. Ces variables permettront de mieux comprendre les contextes locaux et les dynamiques sociales qui influencent le revenu médian.
+
 Nous enrichirons notre récit en interviewant des résidents de quartiers aux profils différents, des conseillers municipaux ainsi que des chercheurs spécialisés en urbanisme ou en géographie sociale. Leurs perspectives aideraient à illustrer les réalités vécues et à contextualiser les écarts observés dans les données.
 
+Pour soutenir cette analyse et offrir un contexte plus large, voici quelques articles et études pertinents à notre histoire :
+
+`-`Inégalités entre les quartiers des villes canadiennes - ARCHIVED
+[https://www150.statcan.gc.ca/n1/pub/11f0019m/11f0019m2000160-fra.pdf](https://www150.statcan.gc.ca/n1/pub/11f0019m/11f0019m2000160-fra.pdf)
+
+`-`L’Étude des quartiers d’Ottawa 
+[https://www.neighbourhoodstudy.ca/fr/](https://www.neighbourhoodstudy.ca/fr/)
+
+`-`La hausse des prix et ses répercussions sur les plus vulnérables financièrement : un profil des personnes faisant partie du quintile inférieur de revenu familial
+[https://www150.statcan.gc.ca/n1/pub/75-006-x/2023001/article/00002-fra.htm](https://www150.statcan.gc.ca/n1/pub/75-006-x/2023001/article/00002-fra.htm)
 
 ## 5. Conclusion
 
 Ce projet nous a permis de mieux comprendre comment transformer un jeu de données brutes en une analyse claire et visuelle. Le processus de nettoyage, de création du tableau croisé dynamique et du graphique à colonnes 3D nous a aidé à voir concrètement les écarts économiques entre les quartiers d’Ottawa. 
+
 Le plus difficile fut d’apprendre à manipuler les fonctions de Google Feuilles de calcul (comme le tableau croisé dynamique etc…) tout en gardant les données exactes et bien formatées. Mais c’est aussi ce qui fut le plus gratifiant : réussir à produire une visualisation lisible et à interpréter les résultats de manière significative. Sur le plan personnel, ce travail nous a montré nos difficultés en analyse statistique et en exploration de données. Nous avons compris qu’au-delà de la technique, il faut toujours replacer les chiffres dans leur contexte social.
+
 Si nous devions recommencer, on ajouterait des données complémentaires (ex. éducation, logement, emploi) pour élargir l’analyse et expliquer plus finement les écarts observés.
+
 En résumé, cette expérience nous a appris à allier rigueur méthodologique et sens critique, tout en ouvrant la voie à une réflexion plus large sur les inégalités de revenu et la justice sociale à Ottawa.
 
 
 ## 6. Références
 
-Exploring facets | OpenRefine. (2024, April 29). https://openrefine.org/docs/manual/facets
-Marier, J.S. (2024). Fichier CSV du recensement 2021 – Données par quartier (Ottawa) [GitHub]. https://raw.githubusercontent.com/jsmarier/files-for-course-assignments/refs/heads/main/Questionnaire_d%C3%A9taill%C3%A9_du_recensement_de_2021_Donn%C3%A9es_par_quartier.csv
+Exploring facets | OpenRefine. (2024, April 29). [https://openrefine.org/docs/manual/facets](https://openrefine.org/docs/manual/facets)
 
-Statistique Canada. (2022, February 25). Exactitude et validation des données : méthodes pour assurer la qualité des données [Vidéo]. https://www.statcan.gc.ca/fr/afc/litteratie-donnees/catalogue/892000062020008
-Ville d’Ottawa. (2023.). Questionnaire détaillé du recensement de 2021 Données par quartier. Ottawa ouverte. https://ouverte.ottawa.ca/datasets/ottawa::questionnaire-d%C3%A9taill%C3%A9-du-recensement-de-2021-donn%C3%A9es-par-quartier/about
-Ville d'Ottawa. (n.d.). Cartes des quartiers et zones des conseils scolaires. Site Web officiel de la ville d’Ottawa. https://ottawa.ca/fr/hotel-de-ville/elections/cartes-des-quartiers-et-zones-des-conseils-scolaires#section-9ac4699c-ed4f-4179-b386-78953e3ab0d0
-Inégalités entre les quartiers des villes canadiennes - ARCHIVED
-https://www150.statcan.gc.ca/n1/pub/11f0019m/11f0019m2000160-fra.pdf
+Marier, J.S. (2024). Fichier CSV du recensement 2021 – Données par quartier (Ottawa) [GitHub]. [https://raw.githubusercontent.com/jsmarier/files-for-course-assignments/refs/heads/main/Questionnaire_d%C3%A9taill%C3%A9_du_recensement_de_2021_Donn%C3%A9es_par_quartier.csv](https://raw.githubusercontent.com/jsmarier/files-for-course-assignments/refs/heads/main/Questionnaire_d%C3%A9taill%C3%A9_du_recensement_de_2021_Donn%C3%A9es_par_quartier.csv)
+
+Statistique Canada. (2022, February 25). Exactitude et validation des données : méthodes pour assurer la qualité des données [Vidéo]. [https://www.statcan.gc.ca/fr/afc/litteratie-donnees/catalogue/892000062020008](https://www.statcan.gc.ca/fr/afc/litteratie-donnees/catalogue/892000062020008)
+
+Ville d’Ottawa. (2023.). Questionnaire détaillé du recensement de 2021 Données par quartier. Ottawa ouverte. [https://ouverte.ottawa.ca/datasets/ottawa::questionnaire-d%C3%A9taill%C3%A9-du-recensement-de-2021-donn%C3%A9es-par-quartier/about](https://ouverte.ottawa.ca/datasets/ottawa::questionnaire-d%C3%A9taill%C3%A9-du-recensement-de-2021-donn%C3%A9es-par-quartier/about)
+
+Ville d'Ottawa. (n.d.). Cartes des quartiers et zones des conseils scolaires. Site Web officiel de la ville d’Ottawa. [https://ottawa.ca/fr/hotel-de-ville/elections/cartes-des-quartiers-et-zones-des-conseils-scolaires#section-9ac4699c-ed4f-4179-b386-78953e3ab0d0](https://ottawa.ca/fr/hotel-de-ville/elections/cartes-des-quartiers-et-zones-des-conseils-scolaires#section-9ac4699c-ed4f-4179-b386-78953e3ab0d0)
+
+Myles , J., Picot, G., & Pyper, W. (Eds.). (2000). *Inégalités entre les quartiers des villes canadiennes - ARCHIVED*. Statistique Canada. 
+[https://www150.statcan.gc.ca/n1/pub/11f0019m/11f0019m2000160-fra.pdf](https://www150.statcan.gc.ca/n1/pub/11f0019m/11f0019m2000160-fra.pdf)
+
 L’Étude des quartiers d’Ottawa 
-https://www.neighbourhoodstudy.ca/fr/
-https://www150.statcan.gc.ca/n1/pub/75-006-x/2023001/article/00002-eng.htm
+[https://www.neighbourhoodstudy.ca/fr/](https://www.neighbourhoodstudy.ca/fr/)
+
+[https://www150.statcan.gc.ca/n1/pub/75-006-x/2023001/article/00002-eng.htm](https://www150.statcan.gc.ca/n1/pub/75-006-x/2023001/article/00002-eng.htm)
 
 **Voici un exemple :**
 
 Bounegru, L., & Gray, J. (Eds.). (2021). *The Data Journalism Handbook 2: Towards A Critical Data Practice*. Amsterdam University Press. [https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153](https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153)
-
-Pour créer une liste non ordonnée, il suffit de mettre une étoile (`*`) devant chaque item.
-1. Alternativement, vous pouvez mettre le code dans une boîte indépendante en utilisant le modèle de code ci-dessous :
-
-``` r
-=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)
-```
-C'est aussi comme ça qu'on crée une liste ordonnée. Il suffit de mettre c1.` devant chaque item.
