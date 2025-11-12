@@ -1,98 +1,105 @@
-**Le 11 novembre 2025**<br>
+**11 novembre 2025**<br>
 **CMN 4500/JOU4500 Journalisme numérique II**<br>
-**Bonavena Gatima.....**<br>
+**Bonavena Gatima, Debora Adebiyi, Djeneba Diakité**<br>
 **Présenté à Jean-Sébastien Marier**<br>
 
-# Analyse exploratoire de données (AED) et proposition
+# Aanalyse exploratoire de données (AED) et proposition
 
-Utilisez un croisillon (`#`) pour créer un intertitre de niveau 1 comme celui-ci.
-
-## Avant-propos
-
-Pour ce travail, vous devez extraire des données d’un site Internet ou d’une base de données. Vous devez ensuite nettoyer et analyser votre jeu de données, trouver une histoire potentielle et créer une visualisation. Votre travail doit clairement expliquer votre processus. Vous devez écrire environ 1500 à 2000 mots et inclure des captures d’écran montrant les différentes étapes de votre analyse. Votre travail doit être rédigé avec le format Markdown et être publié sur GitHub.
-
-J'assigne différentes versions de ce projet à mes étudiants en journalisme numérique et en « data storytelling » depuis déjà quelques années. La structure générale de ce travail est basée sur celle du [*Guide du datajournalisme*](http://jplusplus.github.io/guide-du-datajournalisme/index.html). La présente version est également inspirée du programme [Key Capabilities in Data Science](https://extendedlearning.ubc.ca/programs/key-capabilities-data-science) offert par l'Université de la Colombie-Britannique (UBC).
-
-**Voici quelques ressources utiles pour ce travail :**
-
-* [Page *Syntaxe de base pour l’écriture et la mise en forme* de GitHub](https://docs.github.com/fr/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-* [Le répertoire modèle pour ce projet au cas où vous effaceriez quelque chose par accident](https://github.com/jsmarier/jou4100_jou4500_mpad2003_project2_template)
-
-Avez-vous remarqué comment créer un hyperlien? En langage Markdown, on met le texte cliquable entre une paire de crochets et l'adresse URL entre parenthèses.
-
-Pour créer une liste non ordonnée, il suffit de mettre une étoile (`*`) devant chaque item.
 
 ## 1. Introduction
 
-Insérez votre texte ici.
+Dans ce travail, nous analyserons un jeu de données de la Ville d’Ottawa portant sur le revenu total médian en 2020 parmi les bénéficiaires. Cette variable nous permet d’observer combien les gens gagnent dans différents quartiers d’Ottawa et d’identifier d’éventuelles différences importantes entre eux. L’objectif est d’utiliser ces données pour dégager un angle de reportage portant sur les inégalités de revenu dans la ville.
+
+Les données proviennent du recensement de 2021, colligé par Statistique Canada et diffusé ensuite par la Ville d’Ottawa. Elles ont été recueillies au moyen du questionnaire abrégé, envoyé à 25% des ménages canadiens.Le fichier regroupe ensuite ces informations pour chacun des quartiers de la ville.
+
+Le jeu de données est accessible sur [Ottawa ouverte](https://ouverte.ottawa.ca/datasets/ottawa::questionnaire-d%C3%A9taill%C3%A9-du-recensement-de-2021-donn%C3%A9es-par-quartier/about) et la version CSV utilisée dans ce travail se trouve sur [GitHub](https://raw.githubusercontent.com/jsmarier/files-for-course-assignments/refs/heads/main/Questionnaire_d%C3%A9taill%C3%A9_du_recensement_de_2021_Donn%C3%A9es_par_quartier.csv).
+
+Ce travail suivra les sections suivantes : obtention des données, compréhension des données (analyse VIMA, nettoyage et analyse exploratoire), formulation d’un récit potentiel, conclusion et références.
+
+
 
 ## 2. Obtenir les données
 
-Utilisez deux croisillons (`##`) pour créer un intertitre de niveau 2 comme celui-ci.
+Pour débuter l’analyse, nous avons d’abord téléchargé le fichier CSV contenant les données du _Questionnaire détaillé du recensement de 2021 – Données par quartier_ à partir du portail GitHub de JSMarier. Une fois le fichier enregistré sur notre ordinateur, nous avons ouvert Google Feuilles de calcul, créé une nouvelle feuille, puis cliqué sur Fichier > Importer. Dans le menu d’importation, nous avons sélectionné le fichier CSV du recensement et choisi l’option permettant de remplacer la feuille actuelle. Le jeu de données original est ainsi apparu immédiatement dans Google Sheets.
+#
+**Image 1**
 
-Utilisez le modèle de code ci-dessous pour insérer une capture d'écran. Vos images doivent être sauvegardées dans le même dossier que votre fichier `.md`.
+![](Image1-DonneeBrute.PNG)<br>
+*Le fichier de Google Feuilles de calcul importé.*
 
-![](import-screen-capture.png)<br>
-*Figure 1 : La fenêtre d'importation d'un fichier de Google Feuilles de calcul.*
+Après l’importation, nous avons extrait uniquement les lignes nécessaires à notre analyse, soit la ligne 1, contenant les noms des quartiers, et la ligne 63, correspondant au revenu total médian en 2020 parmi les bénéficiaires. Ces deux lignes ont été copiées dans une nouvelle feuille afin de simplifier la manipulation des données. Nous avons ensuite appliqué les fonctions `=TRANSPOSE(B1:Z1)` et `=TRANSPOSE(B2:Z2)` pour convertir les données horizontales en colonnes verticales, respectivement en A2 et B2. Cette étape permet d’obtenir un tableau plus lisible et mieux adapté à une analyse comparative. Enfin, nous avons renommé les cellules A1 et B1 en « Quartier » et « Revenu total médian en 2020 parmi les bénéficiaires ». 
 
-**Voici quelques exemples de fonctions et de lignes de code mises dans des boîtes grises :**
+#
+**Image 2**
 
-1. Si vous nommez une fonction, mettez là à l'intérieur de guillemets « inclinés » comme ceci : `IMPORTHTML`.
-1. Si vous voulez inclure une ligne de code complète, faites la même chose, mais avec tout le code : `=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)`.
-1. Alternativement, vous pouvez mettre le code dans une boîte indépendante en utilisant le modèle de code ci-dessous :
+![](Image2-Jeudedonnee.PNG)<br>
+*Le fichier Google Feuilles de calcul des données extraites.*
 
-``` r
-=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)
-```
-C'est aussi comme ça qu'on crée une liste ordonnée. Il suffit de mettre `1.` devant chaque item.
+
 
 ## 3. Comprendre les données
 
 ### 3.1. Analyse VIMA
 
 L’une des méthodes pour explorer la validité des données est d’effectuer une analyse VIMA. Cet acronyme signifie Valide, Invalide, Manquante et aberrante (Statistique Canada, 2022). Cette démarche nous permet d’apprécier la qualité, l’exactitude et la fiabilité de notre jeu de données.
-1. Valeur valide : Toutes les valeurs du revenu total médian sont présentes, numériques et cohérentes avec ce que l’on peut attendre pour les quartiers d’Ottawa. Les montants correspondent à une fourchette réaliste pour des revenus médians urbains. Aucune valeur manquante, nulle ou illogique n’a été trouvée, ce qui confirme la validité du jeu de données.
-2. Valeur invalide : Aucune valeur invalide n’a été détectée. Une valeur invalide aurait été, par exemple, une cellule contenant du texte (« N/A », « inconnu »), un symbole ($$$) ou un chiffre négatif. La présence exclusive de nombres entiers positifs et cohérents indique que les données ont été correctement saisies.
-3. Valeur manquantes : Les valeurs manquantes (cellules vides) sont inexistantes dans notre tableau de données. Chaque variable nominale indique un revenu en dollar ce qui renforce la fiabilité du jeu de données.
-4. Valeur Aberrantes : Ce sont celles extrêmement élevées ou extrêmement basses par rapport à ce que l’on s’attendait à observer.  Les plus basses dans notre jeu de données sont à 39 200 $, ce qui représente un écart important avec les quartiers les plus élevés. Mais cela ne veut pas dire qu’elles sont anormales. Aucun revenu ne dépasse de façon démesurée la tendance générale.
+
+`1.` Valeur valide : Toutes les valeurs du revenu total médian sont présentes, numériques et cohérentes avec ce que l’on peut attendre pour les quartiers d’Ottawa. Les montants correspondent à une fourchette réaliste pour des revenus médians urbains. Aucune valeur manquante, nulle ou illogique n’a été trouvée, ce qui confirme la validité du jeu de données.
+
+`2.` Valeur invalide : Aucune valeur invalide n’a été détectée. Une valeur invalide aurait été, par exemple, une cellule contenant du texte (« N/A », « inconnu »), un symbole ($$$) ou un chiffre négatif. La présence exclusive de nombres entiers positifs et cohérents indique que les données ont été correctement saisies.
+
+`3.` Valeur manquantes : Les valeurs manquantes (cellules vides) sont inexistantes dans notre tableau de données. Chaque variable nominale indique un revenu en dollar ce qui renforce la fiabilité du jeu de données.
+
+`4.` Valeur Aberrantes : Ce sont celles extrêmement élevées ou extrêmement basses par rapport à ce que l’on s’attendait à observer.  Les plus basses dans notre jeu de données sont à 39 200 $, ce qui représente un écart important avec les quartiers les plus élevés. Mais cela ne veut pas dire qu’elles sont anormales. Aucun revenu ne dépasse de façon démesurée la tendance générale.
 
 En résumé, les données sont valides, exactes et fiables.
 
 
 ### 3.2. Nettoyage des données
 
-Le nettoyage d' un jeu de données est essentiel pour garantir que l’analyse repose sur des informations justes et fiables. Nous avons donc utilisé trois méthodes différentes afin de corriger les erreurs et nous assurer que nos données sont propres.
+Le nettoyage d'un jeu de données est essentiel pour garantir que l’analyse repose sur des informations justes et fiables. Nous avons donc utilisé trois méthodes différentes afin de corriger les erreurs et nous assurer que nos données sont propres.
 
-La première étape a été d’utiliser l’outil de nettoyage intégré proposé par Google Feuilles de calcul sur la feuille 2.
-Données > Nettoyage de données > Suggestions de nettoyage
+La première étape a été d’utiliser l’outil de nettoyage intégré proposé par Google Feuilles de calcul sur la feuille 2:`Données > Nettoyage de données > Suggestions de nettoyage`
+
 Deux modifications nous ont alors été suggérées: supprimer les espaces blancs dans les colonnes A15 et B1. Ceux-ci ont été acceptés.
-Ensuite, Nous avons utilisé l’outil Statistiques des colonnes pour examiner les valeurs présentes dans chaque colonne.
-Données > Statistiques des colonnes
-Cet outil a permis de remarquer que la cellule A15 contenait seulement l’inscription « Rideau-Rockcliffe », sans le numéro du quartier. Comme les quartiers étaient classés en ordre et que le numéro 13 était manquant, nous avons ajouté « Quartier 13 » dans le tableau. Cette information a également été confirmée en consultant la liste officielle des quartiers sur le site de la Ville d’Ottawa. 
-Pour terminer, nous avons importé les données dans OpenRefine afin d’effectuer une dernière vérification. Nous avons utilisé le filtre Facet > Text facet qui permet d’observer les tendances d’une colonne en regroupant toutes les valeurs uniques qu’elle contient. Un facet sert à repérer rapidement les différents éléments présents dans une variable, à voir combien de fois ils apparaissent et à identifier d’éventuelles anomalies (Exploring Facets | OpenRefine, 2024).
-En appliquant ce filtre à la colonne « Quartier », nous avons pu vérifier si certaines valeurs se répétaient ou s’il existait des erreurs de saisie. Aucune répétition n’a été détectée. Cependant, nous avons constaté que la valeur « Ville d’Ottawa » avait été incluse par erreur dans la colonne des quartiers. Nous l’avons donc supprimée manuellement dans Google Sheets. Après cette correction, notre jeu de données est propre et prêt pour l’analyse.
 
-![Image 3](image-6.png)<br>
+Ensuite, Nous avons utilisé l’outil Statistiques des colonnes pour examiner les valeurs présentes dans chaque colonne; `Données > Statistiques des colonnes`
+
+Cet outil a permis de remarquer que la cellule A15 contenait seulement l’inscription « Rideau-Rockcliffe », sans le numéro du quartier. Comme les quartiers étaient classés en ordre et que le numéro 13 était manquant, nous avons ajouté « Quartier 13 » dans le tableau. Cette information a également été confirmée en consultant la liste officielle des quartiers sur le site de la Ville d’Ottawa. 
+
+Pour terminer, nous avons importé les données dans OpenRefine afin d’effectuer une dernière vérification. Nous avons utilisé le filtre `Facet > Text facet` qui permet d’observer les tendances d’une colonne en regroupant toutes les valeurs uniques qu’elle contient. Un facet sert à repérer rapidement les différents éléments présents dans une variable, à voir combien de fois ils apparaissent et à identifier d’éventuelles anomalies (Exploring Facets | OpenRefine, 2024).
+En appliquant ce filtre à la colonne « Quartier », nous avons pu vérifier si certaines valeurs se répétaient ou s’il existait des erreurs de saisie. Aucune répétition n’a été détectée. Cependant, nous avons constaté que la valeur « Ville d’Ottawa » avait été incluse par erreur dans la colonne des quartiers. Nous l’avons donc supprimée manuellement dans Google Sheets. Après cette correction, notre jeu de données est propre et prêt pour l’analyse.
+#
+**Image 3**
+
+![](Image3-Openrefine.PNG)<br>
+*Analyse facet dans OpenRefine*
+#
+**Image 4**
+
+![](Image4-Donneeprope.PNG)<br>
+*Jeu de données après le processus de nettoyage*
 
 ### 3.3. Analyse exploratoire des données (AED)
 
 Pour commencer l’analyse exploratoire, nous avons créé un tableau croisé dynamique dans Google Feuilles de calcul. L’ensemble du tableau a été sélectionné, puis l’option Données > Tableau croisé dynamique a été appliquée. Dans la nouvelle feuille générée, nous avons choisis :
-·       Ligne : le revenu médian total par bénéficiaire ainsi que les Quartiers
-·       Valeur : les quartiers (option counta)
+
+`*`Ligne : le revenu médian total par bénéficiaire ainsi que les Quartiers
+`*`Valeur : les quartiers (option COUNTA)
+
 Ce tableau croisé dynamique a permis de réorganiser automatiquement les revenus médians des 24 quartiers afin de faciliter leur analyse. En triant les valeurs par ordre croissant, nous avons pu repérer rapidement les quartiers aux revenus les plus faibles et ceux aux revenus les plus élevés. Il a aussi permis de compter le nombre de quartiers associés à chaque montant de revenu grâce à la fonction COUNTA. Cette étape nous a aidés à vérifier si certains quartiers partageaient le même revenu médian.
 
 
-**Cette section doit inclure une capture d'écran de votre tableau croisé dynamique, comme ceci :**
+**Image 5**
 
-![Image 5](image-4.png)<br>
-*Figure 2 : Ce tableau croisé dynamique montre...*
+![](Image5-Tableaucroiseedynamique.PNG)<br>
+*Ce tableau croisé dynamique montre le revenu median des quartiers par ordre croissant ainsi que le nombre de quartiers associés à chaque revenu*
 
 À partir de ce tableau, un graphique exploratoire a été créé à l’aide de l’outil graphique de Google Feuilles de calcul. L’option Insertion > Graphique a été utilisée, puis l’onglet Personnaliser dans l'éditeur de graphique a permis d’ajuster la présentation. Nous avons opté pour un graphique à colonnes en 3D, avec des couleurs vives et modifié le titre. De même, des quadrillages principaux et secondaires ont été sélectionnés pour améliorer la lisibilité. Sur l’axe vertical, nous avons placé les revenus totaux, et sur l’axe horizontal, les quartiers. Ce graphique rend les variations de revenus beaucoup plus visibles et facilite l’interprétation des données.
 
-**Cette section doit aussi inclure une capture d'écran de votre graphique exploratoire, comme ceci :**
+**Image 6**
 
-![Image 6](image-5.png))<br>
-*Figure 3 : Ce graphique exploratoire montre...*
+![](Image6-GraphiqueaBarre.PNG)<br>
+*Ce graphique exploratoire montre le revenu total médian en 2020 selon les quartiers d’Ottawa révélant ainsi les inégalités économiques entre eux*
 
 ## 4. Récit potentiel
 
@@ -126,3 +133,11 @@ https://www150.statcan.gc.ca/n1/pub/75-006-x/2023001/article/00002-eng.htm
 **Voici un exemple :**
 
 Bounegru, L., & Gray, J. (Eds.). (2021). *The Data Journalism Handbook 2: Towards A Critical Data Practice*. Amsterdam University Press. [https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153](https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153)
+
+Pour créer une liste non ordonnée, il suffit de mettre une étoile (`*`) devant chaque item.
+1. Alternativement, vous pouvez mettre le code dans une boîte indépendante en utilisant le modèle de code ci-dessous :
+
+``` r
+=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)
+```
+C'est aussi comme ça qu'on crée une liste ordonnée. Il suffit de mettre c1.` devant chaque item.
